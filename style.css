@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    font-family: "Roboto", serif;
+    background-image: linear-gradient(120deg,#108cd9,#cb6262);
+    color: white;
+}
+h1{
+    font-size: 2rem;
+    margin: 0;
+}
+h1,form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input, form button{
+    padding: 3px;
+    font-size: 2rem;
+    border: none;
+    background-color: white;
+}
+form button{
+    color: #108cd9;
+    background: rgb(233, 224, 10);
+    cursor: pointer;
+    transition: all , ease;
+}
+form button:hover{
+    color: rgb(233, 224, 10);
+    background-color: #108cd9;
+}
+select{
+   appearance: none;  
+  box-shadow: none;
+  border: none;
+  color: #108cd9;
+  width: 10rem;
+  cursor: pointer;
+  padding: 13px; 
+}
+.search{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+ .search:hover::after{
+    background: white;
+    color: #108cd9;
+} 
+.search::after{
+    content: "\25BC";
+    position: absolute;
+    background: #108cd9;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    transition: all ,1s ease;
+    pointer-events: none;
+}  
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+    min-width: 50%;
+    list-style: none;
+    margin: auto;
+}
+ .todo{ 
+    margin: 1rem;
+    background: white;
+    color: #0b2231;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all ,1s ease;
+    box-shadow: 8px 8px 8px black;
+}
+ .todo-item{ 
+    flex: 1;
+    padding: 0rem 0,5rem;
+}
+.complete-btn, .trash-btn{ 
+    background: rgb(233, 30, 30);
+    color: #0b2231;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+.complete-btn{
+    background-color:rgb(88, 229, 88);
+}
+ .fa-trash,.fa-check{ 
+    pointer-events: none;
+}
+.done{ 
+    text-decoration: line-through;
+    opacity: 0,5;
+}
+.fall{
+    opacity: 0;
+    transform: translateY(1rem) rotateZ(360deg);
+} 
